@@ -1,0 +1,38 @@
+# 🚨 Don't change the code below 👇
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this line 👇
+if size == "S":
+    bill = 15
+elif size == "M":
+    bill = 20
+elif size == "L":
+    bill = 25
+else:
+    print(f"{size} is not a valid option.")
+
+if add_pepperoni == "Y":
+    if size == "S":
+        bill += 2
+    else: 
+        bill += 3
+elif add_pepperoni == "N":
+    bill = bill
+else:
+    print(f"{add_pepperoni} is not a valid option.")
+
+if extra_cheese == "Y":
+    bill += 1
+elif extra_cheese == "N": 
+    bill = bill
+else: 
+    print(f"{extra_cheese} is not a valid option.")
+
+if "bill" in globals():
+    print(f"Your final bill is: ${bill}")
+else: 
+    print(f"Try taking your order again. Make sure you put capital letters on the options.")
